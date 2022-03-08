@@ -15,6 +15,6 @@ jobs:
     - name: Build the Docker image
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
-        name: rmeiradev/php7.3-fpm-alpine-nginx
+        name: rmeiradev/php7.3-fpm-alpine-nginx:7.1
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
