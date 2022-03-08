@@ -1,4 +1,4 @@
-FROM php:7.3-fpm-alpine3.15
+FROM php:7.1-fpm-alpine
 
 ENV ACCEPT_EULA=Y
 
@@ -32,6 +32,8 @@ RUN curl -o /usr/local/bin/composer https://getcomposer.org/composer-stable.phar
 RUN rm -rf /var/www/html
 RUN mkdir /var/www/public
 COPY ./index.php /var/www/public/index.php
+
+RUN mkdir -p /run/nginx
 
 # Setting the work directory.
 WORKDIR /var/www
